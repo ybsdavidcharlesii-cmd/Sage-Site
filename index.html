@@ -46,7 +46,12 @@
   .nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--sage-deep);letter-spacing:.04em}
   .nav-provider{display:flex;flex-direction:column;padding-left:14px;margin-left:2px;border-left:1px solid var(--tan);font-family:'Cormorant Garamond',serif!important;font-size:1rem!important;line-height:1.3;letter-spacing:0!important}
   .nav-provider small{font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
-  @media(max-width:600px){.nav-provider{display:none}}
+  @media(max-width:600px){
+    .nav-logo span:not(.nav-provider){display:none}
+    .nav-provider{font-size:.82rem!important;padding-left:10px}
+    .nav-provider small{font-size:.55rem}
+  }
+  @media(max-width:400px){.nav-provider small{display:none}}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
   .nav-links a:hover{color:var(--sage)}
