@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sage Advanced Practice Healthcare | Compassionate Care. Advanced Expertise.</title>
 <meta name="description" content="Sage Advanced Practice Healthcare LLC — personalized nurse practitioner care focused on whole person health. Book your first appointment today.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -34,7 +38,7 @@
   .btn.ghost{background:transparent;color:var(--sage-deep)}
   .btn.ghost:hover{background:var(--sage);color:var(--cream)}
   @media(max-width:520px){.btn{padding:14px 28px;font-size:.9rem}}
-  section{padding:90px 0}
+  section{padding:90px 0;scroll-margin-top:84px}
   .divider{display:flex;justify-content:center;margin:0 auto 18px}
   .divider svg{width:70px;height:22px;stroke:var(--taupe);fill:none;stroke-width:1.5}
 
@@ -51,7 +55,11 @@
     .nav-provider{font-size:.82rem!important;padding-left:10px}
     .nav-provider small{font-size:.55rem}
   }
-  @media(max-width:400px){.nav-provider small{display:none}}
+  @media(max-width:400px){
+    .nav-logo img.mark-sm{height:36px}
+    .nav-provider{font-size:.72rem!important;padding-left:8px}
+    .nav-provider small{font-size:.5rem}
+  }
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
   .nav-links a:hover{color:var(--sage)}
@@ -159,7 +167,20 @@
   footer .fine-wrap{border-top:1px solid rgba(250,249,245,.15);margin-top:48px;padding-top:22px;text-align:center}
   footer .fine{font-size:.8rem;color:#9aa18c}
 
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  /* SCROLL REVEAL */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in-view{opacity:1;transform:translateY(0)}
+  .reveal-stagger.in-view > *{opacity:1;transform:translateY(0)}
+  .reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .reveal-stagger.in-view > *:nth-child(1){transition-delay:.05s}
+  .reveal-stagger.in-view > *:nth-child(2){transition-delay:.15s}
+  .reveal-stagger.in-view > *:nth-child(3){transition-delay:.25s}
+  .reveal-stagger.in-view > *:nth-child(4){transition-delay:.35s}
+
+  @media(prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto}
+    .reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}
+  }
 </style>
 </head>
 <body>
@@ -200,7 +221,7 @@
 
 <!-- BRIDGE / PAIN -->
 <div class="bridge">
-  <div class="wrap">
+  <div class="wrap reveal">
     <h2>Tired of rushed visits, long waits, and feeling like a number?</h2>
     <p>Most people put off care because getting seen feels harder than being sick. At Sage, appointments are unhurried, follow-ups are real, and your whole health — not just today's symptom — is the focus. That's exactly what we built this practice to fix.</p>
   </div>
@@ -210,9 +231,9 @@
 <section id="offerings">
   <div class="wrap">
     <div class="divider"><svg viewBox="0 0 70 22"><path d="M0 11 H25 M45 11 H70 M35 2 Q28 11 35 20 Q42 11 35 2"/></svg></div>
-    <p class="eyebrow" style="text-align:center">What We Offer</p>
-    <h2 style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Care For The Whole Person</h2>
-    <div class="offer-grid">
+    <p class="eyebrow reveal" style="text-align:center">What We Offer</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Care For The Whole Person</h2>
+    <div class="offer-grid reveal-stagger">
       <!-- PLACEHOLDER: replace with Gregorie's actual service list -->
       <div class="offer-card">
         <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
@@ -236,8 +257,8 @@
 <!-- PROVIDER -->
 <section class="provider" id="provider">
   <div class="wrap provider-grid">
-    <div class="arch"><img src="headshotgregorie.png" alt="Gregorie Acceus, APN"></div>
-    <div>
+    <div class="arch reveal"><img src="headshotgregorie.png" alt="Gregorie Acceus, APN"></div>
+    <div class="reveal">
       <p class="eyebrow">Meet Your Provider</p>
       <h2>Gregorie Acceus, APN</h2>
       <p class="creds">Advanced Practice Nurse</p>
@@ -252,9 +273,9 @@
 <section id="first-visit">
   <div class="wrap">
     <div class="divider"><svg viewBox="0 0 70 22"><path d="M0 11 H25 M45 11 H70 M35 2 Q28 11 35 20 Q42 11 35 2"/></svg></div>
-    <p class="eyebrow" style="text-align:center">First-Time Patients</p>
-    <h2 style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Your First Appointment, Made Simple</h2>
-    <div class="steps">
+    <p class="eyebrow reveal" style="text-align:center">First-Time Patients</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Your First Appointment, Made Simple</h2>
+    <div class="steps reveal-stagger">
       <div class="step">
         <h3>1. Request Your Time</h3>
         <p>Pick a time that works below and tell us a little about what you need. It takes two minutes.</p>
@@ -274,9 +295,9 @@
 <!-- TESTIMONIALS -->
 <section style="background:var(--cream-warm)" id="testimonials">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center">Patient Stories</p>
-    <h2 style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Don't Take Our Word For It</h2>
-    <div class="quotes">
+    <p class="eyebrow reveal" style="text-align:center">Patient Stories</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Don't Take Our Word For It</h2>
+    <div class="quotes reveal-stagger">
       <!-- PLACEHOLDER: real testimonials from Gregorie -->
       <div class="quote"><p>[Testimonial 1 — real patient quote.]</p><cite>[First name L.]</cite></div>
       <div class="quote"><p>[Testimonial 2]</p><cite>[First name L.]</cite></div>
@@ -288,10 +309,10 @@
 <!-- BOOKING -->
 <section class="booking" id="book">
   <div class="wrap">
-    <p class="eyebrow">Book An Appointment</p>
-    <h2>Request Your Visit</h2>
+    <p class="eyebrow reveal">Book An Appointment</p>
+    <h2 class="reveal">Request Your Visit</h2>
     <div class="book-grid">
-      <div class="book-info">
+      <div class="book-info reveal">
         <p>Choose a time and tell us what you need. Every request is personally reviewed and confirmed — once approved, your time is officially reserved on our calendar.</p>
         <ul>
           <li>New patients welcome</li>
@@ -300,7 +321,7 @@
           <li>Questions first? Call [phone] or email [email]</li>
         </ul>
       </div>
-      <form id="bookForm" novalidate>
+      <form id="bookForm" class="reveal" novalidate>
         <h3>Appointment Request</h3>
         <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
         <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
@@ -335,9 +356,9 @@
 <section id="location">
   <div class="wrap">
     <div class="divider"><svg viewBox="0 0 70 22"><path d="M0 11 H25 M45 11 H70 M35 2 Q28 11 35 20 Q42 11 35 2"/></svg></div>
-    <p class="eyebrow" style="text-align:center">Visit Us</p>
-    <h2 style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Location & Contact</h2>
-    <div class="loc-grid">
+    <p class="eyebrow reveal" style="text-align:center">Visit Us</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Location & Contact</h2>
+    <div class="loc-grid reveal">
       <div class="map-frame" id="mapSlot">[Apple Maps / Google Maps embed goes here once address is confirmed]</div>
       <ul class="contact-list">
         <li><svg viewBox="0 0 24 24"><path d="M12 21c-4-4.5-7-8-7-11.5A7 7 0 0 1 19 9.5C19 13 16 16.5 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><strong>Office</strong><br>[Street address, City, State ZIP]</span></li>
@@ -402,10 +423,25 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ===== BOOKING FORM — GOOGLE SHEETS (Apps Script) =====
-// 1. Create a Google Sheet with headers: Timestamp | Name | Email | Phone | Type | Date | Time | Notes | Status
-// 2. Extensions → Apps Script → paste the doPost handler → Deploy as Web App (anyone)
-// 3. Paste the deployment URL below:
+// ===== SCROLL REVEAL =====
+const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+if('IntersectionObserver' in window && revealEls.length){
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in-view'));
+}
+
+// ===== BOOKING FORM — sends an email via Apps Script Web App =====
+// 1. Build an Apps Script doPost handler that emails the submitted fields
+// 2. Deploy as Web App (anyone can access) and paste the deployment URL below:
 const SCRIPT_URL = "PASTE_APPS_SCRIPT_URL_HERE";
 
 const form = document.getElementById('bookForm');
