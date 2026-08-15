@@ -417,9 +417,26 @@ navToggle.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', isOpen);
 });
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href') || '';
+    const isAnchor = href.startsWith('#');
+    const target = isAnchor ? document.querySelector(href) : null;
+
     navLinks.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
+
+    if(target){
+      // Close the menu first so layout settles, then scroll on the next
+      // frame — otherwise the browser jumps to the target's position
+      // while the fixed mobile menu is still open, landing in the wrong spot.
+      e.preventDefault();
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, '', href);
+        });
+      });
+    }
   });
 });
 
