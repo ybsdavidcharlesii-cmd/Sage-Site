@@ -44,6 +44,9 @@
   .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
   .nav-logo img.mark-sm{height:46px;width:auto}
   .nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--sage-deep);letter-spacing:.04em}
+  .nav-provider{display:flex;flex-direction:column;padding-left:14px;margin-left:2px;border-left:1px solid var(--tan);font-family:'Cormorant Garamond',serif!important;font-size:1rem!important;line-height:1.3;letter-spacing:0!important}
+  .nav-provider small{font-family:'Jost',sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
+  @media(max-width:600px){.nav-provider{display:none}}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
   .nav-links a:hover{color:var(--sage)}
@@ -60,8 +63,6 @@
 
   /* HERO */
   .hero{padding:110px 0 100px;text-align:center;position:relative;overflow:hidden}
-  .hero-provider{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--sage-deep);margin-bottom:22px}
-  .hero-provider span{display:block;font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);margin-top:4px}
   .hero h1{font-size:clamp(2.4rem,5.5vw,3.9rem);max-width:760px;margin:0 auto 20px}
   .hero p.sub{max-width:600px;margin:0 auto 12px;font-size:1.1rem;color:#555c4e}
   .hero .script{display:block;margin:18px auto 34px}
@@ -163,6 +164,7 @@
     <a href="#top" class="nav-logo">
       <img class="mark-sm" src="emblem-transparent.png" alt="Sage Advanced Practice Healthcare emblem">
       <span>Sage</span>
+      <span class="nav-provider">Gregorie Acceus<small>Advanced Practice Nurse</small></span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -181,7 +183,6 @@
 <header class="hero" id="top">
   <div class="wrap">
     <p class="eyebrow">Advanced Practice Healthcare</p>
-    <p class="hero-provider">Gregorie Acceus<span>Advanced Practice Nurse</span></p>
     <h1>Healthcare That Knows Your Name, Not Just Your Chart</h1>
     <p class="sub">Personalized nurse practitioner care built around you — with the time, attention, and expertise a 10-minute visit can't give.</p>
     <span class="script">Compassionate Care. Advanced Expertise. Whole Person Health.</span>
