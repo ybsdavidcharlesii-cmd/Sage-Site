@@ -41,7 +41,8 @@
   nav{position:sticky;top:0;background:rgba(250,249,245,.92);backdrop-filter:blur(8px);z-index:50;border-bottom:1px solid var(--cream-warm)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
   .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .nav-logo img{height:46px;width:auto}
+  .nav-logo .mark-crop{height:46px;width:46px;overflow:hidden}
+  .nav-logo .mark-crop img{height:135px;width:46px;object-fit:cover;object-position:top}
   .nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--sage-deep);letter-spacing:.04em}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
@@ -141,7 +142,7 @@
 <nav>
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-      <img src="logo.png" alt="Sage Advanced Practice Healthcare logo">
+      <div class="mark-crop"><img src="logo.png" alt="Sage Advanced Practice Healthcare logo"></div>
       <span>Sage <small style="font-size:.6em;letter-spacing:.16em;color:var(--taupe)">APH LLC</small></span>
     </a>
     <div class="nav-links">
