@@ -41,8 +41,7 @@
   nav{position:sticky;top:0;background:rgba(250,249,245,.92);backdrop-filter:blur(8px);z-index:50;border-bottom:1px solid var(--cream-warm)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
   .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .nav-logo .mark-crop{height:46px;width:46px;overflow:hidden}
-  .nav-logo .mark-crop img{height:135px;width:46px;object-fit:cover;object-position:top}
+  .nav-logo img.mark-sm{height:46px;width:auto}
   .nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--sage-deep);letter-spacing:.04em}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
@@ -52,9 +51,6 @@
 
   /* HERO */
   .hero{padding:110px 0 100px;text-align:center;position:relative;overflow:hidden}
-  .hero-leaf{position:absolute;opacity:.08;width:420px;pointer-events:none}
-  .hero-leaf.l{top:-40px;left:-90px;transform:rotate(15deg)}
-  .hero-leaf.r{bottom:-60px;right:-90px;transform:rotate(200deg)}
   .hero img.mark{width:150px;margin:0 auto 28px}
   .hero h1{font-size:clamp(2.4rem,5.5vw,3.9rem);max-width:760px;margin:0 auto 20px}
   .hero p.sub{max-width:600px;margin:0 auto 12px;font-size:1.1rem;color:#555c4e}
@@ -142,7 +138,7 @@
 <nav>
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-      <div class="mark-crop"><img src="logo.png" alt="Sage Advanced Practice Healthcare logo"></div>
+      <img class="mark-sm" src="emblem.png" alt="Sage Advanced Practice Healthcare emblem">
       <span>Sage <small style="font-size:.6em;letter-spacing:.16em;color:var(--taupe)">APH LLC</small></span>
     </a>
     <div class="nav-links">
@@ -157,8 +153,6 @@
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <svg class="hero-leaf l" viewBox="0 0 100 200"><path d="M50 0 Q20 60 50 120 Q80 60 50 0 M50 40 Q30 80 50 130 M50 40 Q70 80 50 130" stroke="#6E7A64" fill="none" stroke-width="2"/></svg>
-  <svg class="hero-leaf r" viewBox="0 0 100 200"><path d="M50 0 Q20 60 50 120 Q80 60 50 0 M50 40 Q30 80 50 130 M50 40 Q70 80 50 130" stroke="#6E7A64" fill="none" stroke-width="2"/></svg>
   <div class="wrap">
     <img class="mark" src="logo.png" alt="Sage Advanced Practice Healthcare — S monogram with botanical wreath">
     <p class="eyebrow">Advanced Practice Healthcare</p>
