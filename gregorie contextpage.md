@@ -31,6 +31,10 @@ Read this before doing anything else in this repo. This is a client website buil
 
 The booking form is wired to POST to a Google Apps Script Web App URL (placeholder `SCRIPT_URL` constant near the bottom of the file, currently `"PASTE_APPS_SCRIPT_URL_HERE"`). It is NOT yet functional — needs the actual Apps Script deployed and the URL pasted in.
 
+**Two integrations pending, both waiting on info from Duke/Gregorie (as of 2026-08-14):**
+- **Google Maps embed** — needs the office address. Placeholder lives at `id="mapSlot"` in the location section.
+- **Calendly link** — a separate "Schedule Appointment" button/link pointing to a Calendly scheduling page, distinct from the on-page form. Needs the actual Calendly URL from Gregorie.
+
 ## What's still needed from Gregorie (not yet received)
 See placeholder markers in `index.html` — every one is commented or bracketed like `[Service 1 — e.g. Primary Care]`. Full list:
 - Mission statement (exact wording)
@@ -51,8 +55,9 @@ See placeholder markers in `index.html` — every one is commented or bracketed 
 ## Technical plan / decisions already made
 - **Hosting:** Vercel, deployed via GitHub — push to `main` auto-deploys. Using Vercel Pro (not Hobby/free tier — free tier ToS excludes commercial client use).
 - **DNS:** sageaph.com is on Namecheap. Will point A/CNAME records to Vercel once the project is live. If Gregorie wants Google Workspace email on the same domain, plan those MX record changes at the same time as the Vercel DNS change (do in one pass, not two).
-- **Booking form → Google Sheets:** via a Google Apps Script `doPost` Web App. Sheet should have columns: Timestamp | Name | Email | Phone | Type | Date | Time | Notes | Status. Script not yet written — needs to be created and deployed, then its URL pasted into `SCRIPT_URL` in `index.html`.
-- **Calendar logic:** appointment requests come in as pending, get manually approved, and only then get blocked on Google Calendar. Client names should NOT be publicly visible on the calendar — only the time block. This logic likely lives in the same Apps Script (on approval, calls Calendar API to create a busy event) or a lightweight admin step Gregorie does herself — needs to be decided/built.
+- **Booking form → email (UPDATED 2026-08-14, supersedes the Sheets/Calendar plan below):** Duke decided the on-page form should just send an email with the submitted info — no Google Sheets, no Apps Script, no automatic Calendar blocking, no approval workflow. Much simpler than originally planned. Still needs an actual mechanism to send that email (e.g. a lightweight Apps Script `doPost` that emails instead of writing to a Sheet, or a form-to-email service like Formspree) — not yet built.
+- **Calendly (separate from the form):** a second, distinct booking path — a "Schedule Appointment" button/link to a Calendly page. Calendly handles its own availability and calendar sync; this is not merged with the on-page form. Waiting on the actual Calendly URL from Gregorie.
+- ~~Original plan (superseded): booking form → Google Sheets via Apps Script `doPost`, with columns Timestamp | Name | Email | Phone | Type | Date | Time | Notes | Status, plus manual approval before blocking Google Calendar (client names not publicly visible, only the time block). Keeping this struck through for history — do not build this version.~~
 - **No framework, no build step currently** — it's plain HTML/CSS/JS in one file. Fine to keep it that way for a single landing page. Only split into multiple files if it starts getting unwieldy — check with Duke before restructuring.
 
 ## Style rules (apply to all copy you write or edit)
@@ -63,10 +68,14 @@ See placeholder markers in `index.html` — every one is commented or bracketed 
 - Third person for this client site (it's not Duke's own brand voice)
 
 ## Next steps
-1. Get remaining client info from Gregorie (see list above)
+1. Get remaining client info from Gregorie (see list above), including office address and Calendly URL
 2. Fill in placeholder content in `index.html`
-3. Build and deploy the Google Apps Script for form submission + calendar blocking
-4. Connect GitHub repo to Vercel, push to deploy
-5. Point sageaph.com DNS at Vercel via Namecheap
-6. Set up the business email (Google Workspace) if that's the route Gregorie wants
-7. Add real photos/videos once received
+3. Build the form-to-email mechanism for the booking form (not Sheets/Calendar — see updated technical plan above)
+4. Add the Google Maps embed once the address is confirmed
+5. Add the Calendly "Schedule Appointment" link once Gregorie provides it
+6. Point sageaph.com DNS at Vercel via Namecheap
+7. Set up the business email (Google Workspace) if that's the route Gregorie wants
+8. Add real photos/videos once received
+
+## Status log
+- 2026-08-14: GitHub repo (`ybsdavidcharlesii-cmd/Sage-Site`) connected and pushed to; Vercel is live and auto-deploying from `main`. Logo and Gregorie's headshot added. Nav logo cropped to emblem-only (`emblem.png`). Booking form direction changed from Sheets/Calendar to simple email send. Calendly added as a second, separate booking path. Still waiting on: office address, Calendly URL, bio copy, mission statement, services list, testimonials, hours/contact info.
