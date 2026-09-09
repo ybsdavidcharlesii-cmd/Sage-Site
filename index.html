@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sage Advanced Practice Healthcare | Compassionate Care. Advanced Expertise.</title>
-<meta name="description" content="Sage Advanced Practice Healthcare LLC: personalized nurse practitioner care focused on whole person health. Book your first appointment today.">
+<title>Sage Advanced Health Care | Wise Care. Compassionate Healing. Healthier Lives.</title>
+<meta name="description" content="Sage Advanced Health Care: personalized, compassionate, evidence-based primary care for adults and older adults. Schedule your appointment today.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
@@ -149,6 +149,17 @@
   .contact-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--cream-warm)}
   .contact-list svg{width:22px;height:22px;stroke:var(--sage);fill:none;stroke-width:1.6;flex-shrink:0;margin-top:3px}
 
+  /* LEGAL / IMPORTANT INFO */
+  .legal{background:var(--cream-warm)}
+  .legal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:50px}
+  .legal-card{background:var(--white);border:1px solid var(--tan);border-radius:14px;padding:28px 26px}
+  .legal-card h3{font-size:1.15rem;margin-bottom:10px;color:var(--sage-deep)}
+  .legal-card p{font-size:.9rem;color:#555c4e;margin-bottom:10px}
+  .legal-card p:last-child{margin-bottom:0}
+  .legal-card.emergency{border-color:#b5544a;background:#fbf1ef}
+  .legal-card.emergency h3{color:#8a3a30}
+  .legal-card.emergency strong{color:#8a3a30}
+
   /* FOOTER */
   footer{background:var(--sage-deep);color:#cfd4c3;padding:64px 0 28px}
   .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:50px}
@@ -213,15 +224,16 @@
 <nav>
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-      <img class="mark-sm" src="emblem-transparent.png" alt="Sage Advanced Practice Healthcare emblem">
+      <img class="mark-sm" src="emblem-transparent.png" alt="Sage Advanced Health Care emblem">
       <span>Sage</span>
-      <span class="nav-provider">Gregorie Acceus<small>Advanced Practice Nurse</small></span>
+      <span class="nav-provider">Gregorie Acceus<small>Adult-Gerontology Primary Care NP</small></span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links" id="navLinks">
       <a href="#offerings">Services</a>
+      <a href="#concierge">Concierge Care</a>
       <a href="#provider">Provider</a>
       <a href="#first-visit">First Visit</a>
       <a href="#location">Location</a>
@@ -233,12 +245,12 @@
 <!-- HERO -->
 <header class="hero" id="top">
   <div class="wrap">
-    <p class="eyebrow">Advanced Practice Healthcare</p>
-    <h1>Healthcare That Knows Your Name, Not Just Your Chart</h1>
-    <p class="sub">Personalized nurse practitioner care built around you, with the time, attention, and expertise a 10-minute visit can't give.</p>
-    <span class="script">Compassionate Care. Advanced Expertise. Whole Person Health.</span>
+    <p class="eyebrow">Welcome to Sage Advanced Health Care</p>
+    <h1>Wise Care. Compassionate Healing. Healthier Lives.</h1>
+    <p class="sub">Personalized, compassionate, and evidence-based healthcare for adults and older adults, focused on your health, your goals, and your quality of life.</p>
+    <span class="script">Your Health. Your Voice. Your Partner in Care.</span>
     <div class="hero-ctas">
-      <a class="btn" href="#book">Request an Appointment</a>
+      <a class="btn" href="#book">Schedule an Appointment</a>
       <a class="btn ghost" href="#offerings">See Our Services</a>
     </div>
   </div>
@@ -247,8 +259,8 @@
 <!-- BRIDGE / PAIN -->
 <div class="bridge">
   <div class="wrap reveal">
-    <h2>Tired of rushed visits, long waits, and feeling like a number?</h2>
-    <p>Most people put off care because getting seen feels harder than being sick. At Sage, appointments are unhurried, follow-ups are real, and your whole health, not just today's symptom, is the focus. That's exactly what we built this practice to fix.</p>
+    <h2>Exceptional healthcare begins with listening.</h2>
+    <p>Every patient deserves to feel heard, respected, and involved in decisions about their care. Our goal is to help you maintain your health, manage chronic conditions, prevent complications, and enjoy the best possible quality of life.</p>
   </div>
 </div>
 
@@ -259,22 +271,67 @@
     <p class="eyebrow reveal" style="text-align:center">What We Offer</p>
     <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Care For The Whole Person</h2>
     <div class="offer-grid reveal-stagger">
-      <!-- PLACEHOLDER: replace with Gregorie's actual service list -->
       <div class="offer-card">
         <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
-        <h3>[Service 1, e.g. Primary Care]</h3>
-        <p>[One sentence: what it does in plain English, so the patient knows the benefit. E.g. "Annual physicals, sick visits, and ongoing care from a provider who knows your history."]</p>
+        <h3>Adult & Geriatric Primary Care</h3>
+        <p>Comprehensive healthcare focused on the unique needs of adults and older adults, including routine evaluations, ongoing health maintenance, and management of acute and chronic medical concerns.</p>
       </div>
       <div class="offer-card">
         <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
-        <h3>[Service 2, e.g. Chronic Condition Management]</h3>
-        <p>[Benefit-first description.]</p>
+        <h3>Chronic Disease Management</h3>
+        <p>Individualized evaluation and ongoing management of conditions such as hypertension, type 2 diabetes, high cholesterol, chronic kidney disease, COPD, thyroid disorders, anemia, arthritis, gout, and other common chronic conditions affecting adults and older adults.</p>
       </div>
       <div class="offer-card">
         <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
-        <h3>[Service 3, e.g. Wellness & Prevention]</h3>
-        <p>[Benefit-first description.]</p>
+        <h3>Preventive Care & Wellness</h3>
+        <p>Age-appropriate health screenings, routine examinations, health risk assessments, immunization review, and lifestyle counseling to help you catch concerns early.</p>
       </div>
+      <div class="offer-card">
+        <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
+        <h3>Medication Management</h3>
+        <p>Medication reconciliation and ongoing review to promote safe, effective treatment while helping reduce medication interactions, duplication, and other related concerns.</p>
+      </div>
+      <div class="offer-card">
+        <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
+        <h3>Transitional & Post-Hospital Care</h3>
+        <p>Follow-up after hospitalization, rehabilitation, or other transitions of care to review medications, address ongoing medical needs, and help reduce the risk of complications and unnecessary hospital readmissions.</p>
+      </div>
+      <div class="offer-card">
+        <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
+        <h3>Patient & Family Education</h3>
+        <p>Education to help you and your family understand diagnoses, medications, treatment options, and preventive health recommendations, so you're equipped to participate in your care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCIERGE -->
+<section id="concierge" style="background:var(--cream-warm)">
+  <div class="wrap">
+    <div class="divider"><svg viewBox="0 0 70 22"><path d="M0 11 H25 M45 11 H70 M35 2 Q28 11 35 20 Q42 11 35 2"/></svg></div>
+    <p class="eyebrow reveal" style="text-align:center">Concierge & Private-Pay Care</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Care That Fits Your Schedule</h2>
+    <p class="reveal" style="max-width:680px;margin:16px auto 0;text-align:center;color:#555c4e">Looking for healthcare that fits your schedule and individual needs? Sage Advanced Health Care offers personalized private-pay and concierge services designed to make accessing quality care easier and more convenient.</p>
+    <div class="offer-grid reveal-stagger" style="margin-top:40px">
+      <div class="offer-card">
+        <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
+        <h3>Personalized, Unhurried Visits</h3>
+        <p>Private home visits, telehealth visits, and same-day or priority appointments when available, all with the time a real conversation about your health deserves.</p>
+      </div>
+      <div class="offer-card">
+        <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
+        <h3>Ongoing Coordination</h3>
+        <p>Medication reviews and management, chronic condition follow-up, post-hospital care, and personalized care coordination between visits.</p>
+      </div>
+      <div class="offer-card">
+        <svg class="leaf" viewBox="0 0 34 34"><path d="M17 4 Q8 14 17 30 Q26 14 17 4 M17 12 Q13 19 17 28 M17 12 Q21 19 17 28"/></svg>
+        <h3>Wellness & Family Support</h3>
+        <p>Health and wellness consultations, plus family and caregiver consultations to keep everyone involved in your care aligned.</p>
+      </div>
+    </div>
+    <p class="reveal" style="max-width:680px;margin:36px auto 0;text-align:center;color:#555c4e">Pricing is available upon request. Contact us to learn more about our services, availability, and the care option that best meets your needs.</p>
+    <div class="reveal" style="text-align:center;margin-top:24px">
+      <a class="btn" href="#book">Contact Us About Concierge Care</a>
     </div>
   </div>
 </section>
@@ -282,14 +339,15 @@
 <!-- PROVIDER -->
 <section class="provider" id="provider">
   <div class="wrap provider-grid">
-    <div class="arch reveal"><img src="headshotgregorie.png" alt="Gregorie Acceus, APN"></div>
+    <div class="arch reveal"><img src="headshotgregorie.png" alt="Gregorie Acceus, Adult-Gerontology Primary Care Nurse Practitioner"></div>
     <div class="reveal">
       <p class="eyebrow">Meet Your Provider</p>
-      <h2>Gregorie Acceus, APN</h2>
-      <p class="creds">Advanced Practice Nurse</p>
-      <p>[First-person intro: "I'm [Name]. I've spent [X] years in [specialty/settings]. I started Sage Advanced Practice Healthcare because [relatable reason, e.g. patients deserve a provider who actually listens]."]</p>
-      <p>[What that means for the patient: longer visits, direct communication, care plans built together.]</p>
-      <p><strong>Our mission:</strong> [Mission statement from Gregorie goes here.]</p>
+      <h2>Gregorie Acceus</h2>
+      <p class="creds">Adult-Gerontology Primary Care Nurse Practitioner</p>
+      <p>Gregorie Acceus is an Adult-Gerontology Primary Care Nurse Practitioner dedicated to providing compassionate, evidence-based care to adult and geriatric patients.</p>
+      <p>With extensive nursing experience across a variety of healthcare settings, Gregorie brings a comprehensive and patient-centered approach to primary care. Clinical experience includes caring for medically complex adults and older adults, chronic disease management, medication management, transitional care, post-acute care, long-term care, and preventive health.</p>
+      <p>Gregorie believes that healthcare should be a partnership between the patient and provider. Patients are encouraged to ask questions, understand their treatment options, and participate actively in decisions regarding their health.</p>
+      <p><strong>Our mission:</strong> Provide knowledgeable, respectful, and compassionate care that helps every patient live as safely, independently, and healthfully as possible.</p>
     </div>
   </div>
 </section>
@@ -298,8 +356,9 @@
 <section id="first-visit">
   <div class="wrap">
     <div class="divider"><svg viewBox="0 0 70 22"><path d="M0 11 H25 M45 11 H70 M35 2 Q28 11 35 20 Q42 11 35 2"/></svg></div>
-    <p class="eyebrow reveal" style="text-align:center">First-Time Patients</p>
-    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Your First Appointment, Made Simple</h2>
+    <p class="eyebrow reveal" style="text-align:center">New Patients</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Welcome to Sage Advanced Health Care</h2>
+    <p class="reveal" style="max-width:680px;margin:16px auto 0;text-align:center;color:#555c4e">Thank you for choosing us for your healthcare needs. To help us provide comprehensive care, new patients should bring or make available:</p>
     <div class="steps reveal-stagger">
       <div class="step">
         <h3>1. Request Your Time</h3>
@@ -310,8 +369,8 @@
         <p>Our team reviews every request personally and confirms your appointment by email or phone, usually within one business day.</p>
       </div>
       <div class="step">
-        <h3>3. Come As You Are</h3>
-        <p>[What to bring: ID, insurance card, medication list, prior records. Confirm details with Gregorie.]</p>
+        <h3>3. Come Prepared</h3>
+        <p>Bring your current medication and supplement list, medication allergy information, insurance information and photo identification, relevant medical records, recent laboratory or imaging results (when available), hospital discharge paperwork (if applicable), and contact information for any specialists involved in your care. Please arrive with enough time to complete any required registration paperwork.</p>
       </div>
     </div>
   </div>
@@ -334,8 +393,9 @@
 <!-- BOOKING -->
 <section class="booking" id="book">
   <div class="wrap">
-    <p class="eyebrow reveal">Book An Appointment</p>
-    <h2 class="reveal">Request Your Visit</h2>
+    <p class="eyebrow reveal">Contact Us</p>
+    <h2 class="reveal">Your Health. Your Voice. Your Partner in Care.</h2>
+    <p class="reveal" style="max-width:640px;color:#e3e6da;margin-top:-6px">Whether you are looking for preventive healthcare, ongoing management of a chronic condition, or a trusted provider to help coordinate your healthcare needs, Sage Advanced Health Care is here to help. Schedule an appointment and take the next step toward better health.</p>
     <div class="book-grid">
       <div class="book-info reveal">
         <p>Choose a time and tell us what you need. Every request is personally reviewed and confirmed, and once approved, your time is officially reserved on our calendar.</p>
@@ -395,6 +455,33 @@
   </div>
 </section>
 
+<!-- LEGAL / IMPORTANT INFORMATION -->
+<section class="legal" id="important-information">
+  <div class="wrap">
+    <div class="divider"><svg viewBox="0 0 70 22"><path d="M0 11 H25 M45 11 H70 M35 2 Q28 11 35 20 Q42 11 35 2"/></svg></div>
+    <p class="eyebrow reveal" style="text-align:center">Important Information</p>
+    <h2 class="reveal" style="text-align:center;font-size:clamp(1.9rem,4vw,2.6rem)">Please Read Before Contacting Us</h2>
+    <div class="legal-grid reveal-stagger">
+      <div class="legal-card emergency">
+        <h3>Emergency Notice</h3>
+        <p><strong>If you are experiencing a medical emergency, call 911 or go to the nearest emergency department immediately.</strong></p>
+        <p>Do not use this website, email, contact forms, messaging services, or a patient portal to communicate an emergency or other time-sensitive medical concern. Electronic communications may not be reviewed immediately.</p>
+        <p>Symptoms such as severe chest pain, significant difficulty breathing, signs of stroke, severe bleeding, loss of consciousness, or another potentially life-threatening condition require immediate medical attention. Sage Advanced Health Care does not provide emergency medical services through this website.</p>
+      </div>
+      <div class="legal-card">
+        <h3>Medical Disclaimer</h3>
+        <p>Information presented on this website is provided for general educational and informational purposes only. It is not intended to replace individualized medical advice, diagnosis, or treatment from a qualified healthcare professional.</p>
+        <p>Use of this website does not, by itself, establish a patient-provider relationship with Sage Advanced Health Care or any of its healthcare professionals. Treatment recommendations are made only after an appropriate clinical evaluation and establishment of a professional healthcare relationship.</p>
+      </div>
+      <div class="legal-card">
+        <h3>Privacy Statement</h3>
+        <p>Sage Advanced Health Care respects the privacy and confidentiality of our patients. Information submitted electronically may be subject to privacy and security limitations. Patients should avoid submitting sensitive medical information through ordinary email or unsecured website forms.</p>
+        <p>Protected health information will be handled in accordance with applicable federal and state privacy requirements and the practice's Notice of Privacy Practices. A complete Notice of Privacy Practices is available separately to patients as required by applicable law.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -403,13 +490,14 @@
           <img src="emblem-transparent.png" alt="">
           <span>Sage</span>
         </div>
-        <span class="script">Local. Personalized. Whole Person Care.</span>
-        <p class="blurb">Personalized nurse practitioner care built around you, with the time and attention every visit deserves.</p>
+        <span class="script">Wise Care. Compassionate Healing. Healthier Lives.</span>
+        <p class="blurb">Personalized, compassionate, and evidence-based healthcare for adults and older adults, built around your health and your voice.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#offerings">Services</a></li>
+          <li><a href="#concierge">Concierge Care</a></li>
           <li><a href="#provider">Provider</a></li>
           <li><a href="#first-visit">First Visit</a></li>
           <li><a href="#location">Location</a></li>
@@ -426,7 +514,7 @@
       </div>
     </div>
     <div class="fine-wrap">
-      <p class="fine">© <span id="yr"></span> Sage Advanced Practice Healthcare LLC · sageaph.com<br>[Disclaimer line if needed. E.g. "If this is a medical emergency, call 911."]</p>
+      <p class="fine">© <span id="yr"></span> Sage Advanced Health Care LLC · sageaph.com<br>If you are experiencing a medical emergency, call 911 or go to the nearest emergency department immediately.</p>
     </div>
   </div>
 </footer>
