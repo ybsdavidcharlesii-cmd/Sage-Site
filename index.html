@@ -50,7 +50,10 @@
   .nav-logo img.mark-sm{height:58px;width:auto}
   .nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--sage-deep);letter-spacing:.04em}
   .nav-provider{display:flex;flex-direction:column;padding-left:16px;margin-left:2px;border-left:1px solid var(--tan);font-family:'Cormorant Garamond',serif!important;font-size:1.2rem!important;line-height:1.3;letter-spacing:0!important}
-  .nav-provider small{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
+  .nav-provider small{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--taupe);white-space:nowrap}
+  @media(max-width:1000px){
+    .nav-provider small{font-size:.66rem;letter-spacing:.05em}
+  }
   @media(max-width:600px){
     .nav-logo span:not(.nav-provider){display:none}
     .nav-provider{font-size:.95rem!important;padding-left:10px}
@@ -61,13 +64,13 @@
     .nav-provider{font-size:.85rem!important;padding-left:8px}
     .nav-provider small{font-size:.55rem}
   }
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{text-decoration:none;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
   .nav-links a:hover{color:var(--sage)}
   .nav-links .btn{padding:10px 24px}
   .nav-toggle{display:none;background:none;border:none;padding:8px;cursor:pointer;flex-direction:column;gap:5px}
   .nav-toggle span{display:block;width:24px;height:2px;background:var(--sage-deep);transition:transform .25s,opacity .25s}
-  @media(max-width:820px){
+  @media(max-width:1000px){
     .nav-toggle{display:flex}
     .nav-links{position:fixed;top:87px;left:0;right:0;background:var(--cream);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;border-bottom:1px solid var(--cream-warm);transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform .2s,opacity .2s}
     .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
@@ -226,7 +229,7 @@
     <a href="#top" class="nav-logo">
       <img class="mark-sm" src="emblem-transparent.png" alt="Sage Advanced Health Care emblem">
       <span>Sage</span>
-      <span class="nav-provider">Gregorie Acceus<small>Adult-Gerontology Primary Care NP</small></span>
+      <span class="nav-provider">Gregorie Acceus<small>Nurse Practitioner</small></span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
